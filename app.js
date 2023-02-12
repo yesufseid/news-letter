@@ -4,6 +4,7 @@ const request=require("request")
 const https=require("https");
 const { error } = require("console");
 const app=express();
+const api=require(__dirname +"/api.js")
 app.use(express.static('public'))
 app.use(bodyparser.urlencoded({extended:true}));
 app.get("/",function(req,res){
@@ -30,7 +31,7 @@ var jsondata=JSON.stringify(data);
 const url="https://us18.api.mailchimp.com/3.0/lists/7808da96c9";
 const options={
     method:"POST",
-    auth:"seid:96aed94707eb449ef9cfb6458f2227f7-us18"
+    auth:"seid:"
 }
 app.post("/faluir",function(req,res){
     res.redirect("/")
@@ -67,10 +68,7 @@ request.end()
 
 
 
-//api key
-//765a8901311c93f695f8b253da5bc2b7-us21
-//list id
-//c7a7da62c2
+
 
 
 
