@@ -51,8 +51,6 @@ if (error === 0){
 
   response.on("data",function(data){
     var error=JSON.parse(data ).error_count
-    console.log(JSON.parse(data ));
-    console.log(error);
 //    console.log(response.statusCode);
    })
 })
